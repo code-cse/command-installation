@@ -5,6 +5,7 @@ This repository contains the command for different package installation.
 ### Tensorflow-GPU Installation
 
 ![alt text](images/tf.jpg)
+
 [image-source][https://www.tensorflow.org/]
 
 ##### Install Nvidia-Driver for GPU (for tensorflow <= 1.13)
@@ -59,6 +60,7 @@ For python2
 ### Tensorflow-CPU Installation
 
 ![alt text](images/tf.jpg)
+
 [image-source][https://www.tensorflow.org/]
 
 ##### Create virtual-env
