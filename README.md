@@ -6,7 +6,7 @@ This repository contains the command for different package installation.
 
 ```
 ├── Tensorflow-installation	             # Tensorflow Installation command
-├── Readme	             				 # Readme for installation command
+├── Readme	                             # Readme for installation command
 
 ```
 
