@@ -1,5 +1,5 @@
 
-##  Installation command 
+##  [Installation command](README.md) 
 This repository contains the command for different package installation.
 
 ### Tensorflow-GPU Installation
@@ -56,6 +56,8 @@ For python2
 
 
 ### Tensorflow-CPU Installation
+
+![alt text](images/tf.jpg)
 
 ##### Create virtual-env
 
