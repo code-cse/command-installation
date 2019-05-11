@@ -1,5 +1,5 @@
 
-##  [Installation command](README.md) 
+##  [Installation command](command-installation) 
 This repository contains the command for different package installation.
 
 ### Tensorflow-GPU Installation
