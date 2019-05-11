@@ -11,10 +11,11 @@ This repository contains the command for different package installation.
 ```
 
 
-### Tensorflow-GPU Installation
+### Tensorflow Installation
+
+![alt text](images/tf.jpg)
 
 [Tensorflow-GPU](tensorflow-installation.md)
 
-### Tensorflow-CPU Installation
 
 [Tensorflow-CPU](tensorflow-installation.md)

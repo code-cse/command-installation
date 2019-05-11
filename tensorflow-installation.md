@@ -4,6 +4,8 @@ This repository contains the command for different package installation.
 
 ### Tensorflow-GPU Installation
 
+![alt text](images/tf.jpg)
+
 ##### Install Nvidia-Driver for GPU (for tensorflow <= 1.13)
 
 It was updating the GPU driver to the latest and installing the cuda toolkit. First, the ppa was added and GPU driver installed:
