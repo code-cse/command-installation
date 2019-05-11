@@ -10,7 +10,9 @@ It was updating the GPU driver to the latest and installing the cuda toolkit. Fi
 
 
 `sudo add-apt-repository ppa:graphics-drivers/ppa`
+
 `sudo apt update`
+
 `sudo apt install nvidia-390`
 
 After adding the ppa, it showed options for driver versions, and 390 was the latest 'stable' version that was shown.
