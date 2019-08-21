@@ -98,3 +98,68 @@ or
 for latest version
 
 `e.g.`  `pip2 install tensorflow` 
+
+
+
+
+
+
+## Another Option
+
+his is taken from the Google instructions, but with the proper versions of CUDA that will work for TensorFlow v1.7:
+
+curl -O https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
+
+sudo dpkg -i cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
+
+sudo apt-get update
+
+sudo apt-get install cuda-9-0
+
+sudo nvidia-smi -pm 1
+
+
+Then you should verify that everything is installed and working with:
+
+
+nvidia-smi
+
+
+Google’s instructions do not mention installing the cudnn, but it appears to be required. To download it you need to register with Nvidia’s Developer’s Program, download it and then upload it to your instance. I uploaded it using SCP which took a while. The file I used was libcudnn7_7.0.4.31–1+cuda9.0_amd64.deb, which is the version required for cuda-9.0 with TensorFlow 1.7. Once it is uploaded you can install it with:
+
+
+sudo dpkg -i libcudnn7_7.0.4.31-1+cuda9.0_amd64.deb
+
+
+Once this is all installed you need to set some PATH variables. Google’s instructions add the variable to the path temporarily, so need to be run every time you boot the instance. This will add them permanently:
+
+echo 'export CUDA_HOME=/usr/local/cuda' >> ~/.bashrc
+
+echo 'export PATH=$PATH:$CUDA_HOME/bin' >> ~/.bashrc
+
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
+
+source ~/.bashrc
+
+
+Finally you can install TensorFlow:
+
+
+sudo apt-get install python3-dev python3-pip libcupti-dev
+
+sudo pip3 install tensorflow-gpu
+
+Finally, Google suggests a couple of settings to optimize the GPU performance:
+
+### this applies to all GPUs
+
+
+sudo nvidia-smi -pm 1
+
+
+### these only apply to Nvidia Tesla K80s
+
+
+sudo nvidia-smi -ac 2505,875
+
+sudo nvidia-smi --auto-boost-default=DISABLED
