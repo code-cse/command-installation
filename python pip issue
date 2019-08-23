@@ -1,0 +1,10 @@
+I had the same problem, but uninstall and reinstall with apt and pip didn't work for me. <br/>
+Traceback (most recent call last): <br/>
+
+File "/usr/bin/pip3", line 9, in <module>  <br/>
+    from pip import main  <br/>
+ImportError: cannot import name 'main' <br/>
+
+I saw another solution on stackoverflow that presents a easy way to recover pip3 path: <br/>
+
+sudo python3 -m pip uninstall pip && sudo apt install python3-pip --reinstall <br/>
