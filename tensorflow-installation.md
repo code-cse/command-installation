@@ -11,7 +11,7 @@ This repository contains the command for different package installation.
 **********************************************************************************************************
 ### New update to install Tensorflow-GPU
 
-####### Cuda and nvidia driver installation links: https://www.tensorflow.org/install/gpu
+* Cuda and nvidia driver installation links: https://www.tensorflow.org/install/gpu
 
 ##### Add NVIDIA package repositories
 ##### Add HTTPS support for apt-key
