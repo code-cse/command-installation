@@ -163,3 +163,19 @@ sudo nvidia-smi -pm 1
 sudo nvidia-smi -ac 2505,875
 
 sudo nvidia-smi --auto-boost-default=DISABLED
+
+
+### Cleaning the nvidia driver:
+* After Cleaning cache, you can try these,
+
+* dpkg -l | grep cuda- | awk '{print $2}' | xargs -n1 sudo dpkg --purge
+
+* df -h
+
+* sudo apt-get purge nvidia*
+
+* sudo apt-get -f install
+
+* sudo apt autoremove
+
+* Hope, this might help you. Cheers
